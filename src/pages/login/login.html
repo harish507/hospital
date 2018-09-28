@@ -1,0 +1,50 @@
+<ion-content class="background" >
+  <ion-navbar color="primary">
+	  <ion-title>
+	<h5 style="color:azure;font-size:25px;">User Login Form</h5>      
+</ion-title>
+  </ion-navbar>
+	<div class="lav">
+					<form (ngSubmit)="login()" [formGroup]="loginform" class="color">
+				 <ion-item class="lav1">`
+						 <ion-input class="lav2" placeholder="Username" type="text" [(ngModel)]="userData.username" formControlName="username" [class.error1]="!loginform.controls.username.valid && loginform.controls.username.dirty"></ion-input>
+				</ion-item>
+	
+				<div class="error">
+					<div  *ngIf="loginform.get('username').hasError('required') && loginform.get('username').touched">
+						Please input your username
+					</div>
+					<div  *ngIf="loginform.get('username').hasError('minlength') && loginform.get('username').touched">
+						Minimum 4 characters
+					</div>
+					<div  *ngIf="loginform.get('username').hasError('maxlength') && loginform.get('username').touched">
+						Maximum 10 characters
+					</div>
+					<div  *ngIf="loginform.get('username').hasError('pattern') && loginform.get('username').touched">
+						Just use alphabet character
+					</div>
+				</div><br>
+
+				<ion-item class="lav1">
+										<ion-input class="lav2" placeholder="Password" type="password" [(ngModel)]="userData.password" formControlName="password" [class.error1]="!loginform.controls.password.valid && loginform.controls.password.dirty"></ion-input>
+				</ion-item>
+	
+				<div class="error" >
+					<div  *ngIf="loginform.get('password').hasError('required') && loginform.get('password').touched">
+						Please input your password
+					</div>
+					<div *ngIf="loginform.get('password').hasError('minlength') && loginform.get('password').touched">
+						Minimum 6 characters
+					</div>
+					<div  *ngIf="loginform.get('password').hasError('maxlength') && loginform.get('password').touched">
+						Maximum 12 characters
+					</div>
+				</div>
+				<br>
+				<br>
+				<button class="lav3" type="submit" ion-button block color="primary" [disabled]="loginform.invalid" >Login</button>
+			</form><br><br>
+	<button ion-button clear full color="light" style="font-size:17px;" (click)="register()"> Don't Have An Account? Register</button>
+</div>  
+</ion-content>
+	

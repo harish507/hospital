@@ -1,0 +1,62 @@
+<!--
+  Generated template for the VitaminsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar no-border-bottom>
+    <ion-title text-center>
+      <h4 style="color:goldenrod;font-size:120%;margin-left:8px;">Contact</h4>
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="items">
+      <ion-segment-button value="contact" >
+       <h5 style="margin-left:3px;color:goldenrod;">Contact People</h5>
+      </ion-segment-button>
+      <ion-segment-button value="feedback">
+       <h5 style="margin-left:50px;color:goldenrod;">Feedback</h5>
+      </ion-segment-button>
+     </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="background">
+  <ion-card-content class="card">
+    <div [ngSwitch]="items">
+
+    
+  <ion-list *ngSwitchCase="'contact'">
+     
+      <ion-item class="border" no-lines>
+        
+        <h2>Sai</h2>
+        <h2>saikanchupati00@gmail.com</h2>
+        <h2>8977770400</h2>
+      </ion-item><br>
+   
+      <ion-item class="border" >
+        
+        <h2>Sravan</h2>
+        <h2>sravan12354@gmail.com</h2>
+        <h2>8999900000</h2>
+      </ion-item>
+   
+   </ion-list>
+
+   <ion-list *ngSwitchCase="'feedback'">
+    <h5 style="color:azure">Please Enter Your feedback</h5>
+        <ion-item class="border" no-lines>
+            <ion-input type="text" placeholder="Write Over Us" style="width:300px;height:300px;border-radius:15px;">FeedBack</ion-input>
+      </ion-item><br><br>
+      <button ion-button outline color="secondary" full round (click)="buttonClick()" >Submit</button>
+    </ion-list>
+    </div>
+  </ion-card-content>
+
+
+</ion-content>

@@ -1,0 +1,56 @@
+<!--
+  Generated template for the FittnessPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar  color="primary"> 
+    <ion-title>Full Body Home Workouts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="color">
+    <ion-list>
+        
+            <ion-item (click)="chest()" class="border" no-lines>
+                    <ion-thumbnail item-start>
+                      <img src="assets/imgs/75.jpg" style="border-radius:50%">
+                    </ion-thumbnail>
+                    <h2>Chest Workouts</h2>
+             </ion-item><br>
+
+
+             <ion-item (click)="arm()" class="border" no-lines>
+                    <ion-thumbnail item-start>
+                      <img src="assets/imgs/2.jpg" style="border-radius:50%">
+                    </ion-thumbnail>
+                    <h2>Arm Workouts</h2>
+                  </ion-item><br>
+        
+          <ion-item (click)="abs()" class="border" no-lines>
+            <ion-thumbnail item-start>
+                <img src="assets/imgs/3.jpg" style="border-radius:50%">
+                </ion-thumbnail>
+            <h2>Abs Workouts</h2>
+        </ion-item><br>
+
+        <ion-item (click)="shoulder()" class="border" no-lines>
+                <ion-thumbnail  item-start>
+            <img src="assets/imgs/4.jpg" style="border-radius:50%">
+        </ion-thumbnail>
+            <h2 text-wrap>Shoulder and Back Workouts</h2>
+       
+        </ion-item><br>
+
+          <ion-item (click)="leg()" class="border" no-lines>
+            <ion-thumbnail  item-start>
+            <img src="assets/imgs/5.jpg" style="border-radius:50%">
+        </ion-thumbnail>
+            <h2>Leg Workouts</h2>
+        </ion-item>
+    </ion-list>
+
+
+</ion-content>
